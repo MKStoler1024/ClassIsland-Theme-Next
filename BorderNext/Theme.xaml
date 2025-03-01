@@ -231,6 +231,14 @@
                                             </ProgressBar.Effect>
                                         </ProgressBar>
                                     </Border>
+                                    <Border CornerRadius="10" Padding="15 0"
+                                            Height="40"
+                                            BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="0.75"
+                                            >
+                                        <Border.Effect>
+                                            <DropShadowEffect BlurRadius="8" ShadowDepth="0" Opacity="0.8"  Color="{Binding BorderBrush, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Border}, Converter={StaticResource SolidColorBrushToColorConverter}}"/>
+                                        </Border.Effect>
+                                    </Border>
                                     <ContentPresenter
                                         Content="{Binding ViewModel.CurrentOverlayElement, RelativeSource={RelativeSource FindAncestor, AncestorType=classIsland:MainWindow}}" />
 
